@@ -3,7 +3,7 @@ const readline = require('readline');
 async function print(line, sleepAmount) {
     await new Promise(r => setTimeout(r, sleepAmount));
 
-    console.log(sleepAmount, line);
+    console.log(line);
 }
 
 async function main() {
