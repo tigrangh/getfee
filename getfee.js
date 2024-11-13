@@ -31,7 +31,7 @@ async function processTron(tronWeb, hash) {
 }
 
 async function main() {
-    if (process.argv.length >= 3) {
+    if (process.argv.length < 3) {
         console.error('set an argument - ethereum or tron');
         process.exit(1);
     }
@@ -43,7 +43,7 @@ async function main() {
     });
     
     if (process.argv[2] == 'ethereum') {
-        if (process.argv.length >= 4) {
+        if (process.argv.length < 4) {
             console.error('pass also ethereum http provider full url');
             process.exit(1);
         }
